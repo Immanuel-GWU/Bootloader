@@ -9,4 +9,4 @@ This kernel is not a full fledged kernel rather it just when loaded will print t
 	
 4. Linker ID to link all separately written files whether .asm or .c
 	
-5. GNU make to convert all the linked files into .exe file so that it can be run and the message can be seen in the QEMU machine virtualizer. 
+5. GNU make to convert all the linked files into .exe file so that it can be run in QEMU machine virtualizer. 
