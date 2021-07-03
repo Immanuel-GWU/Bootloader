@@ -14,7 +14,7 @@ mov bp, 0x9000  ; Stack range is from 0x1000 -----> 0x9000
 mov sp, bp
 
 call kernel
-call 16bit_to_32bit ; Separate asm file containing code needed inorder to convert to 32 bit
+call sw_to_32bit ; Separate asm file containing code needed inorder to convert to 32 bit
 
 jmp $
 
@@ -33,7 +33,7 @@ kernel:  ; Procedure instructs the BIOS to load the kernel from disk into memory
 	ret
 
 [bits 32]
-32bit:
+start_32bit:
 	call KERNEL_OFFSET  ; give control to the kernel
 	jmp $   ; loop in case kernel returns
 
